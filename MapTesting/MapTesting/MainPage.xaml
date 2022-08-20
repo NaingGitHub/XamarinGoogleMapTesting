@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             x:Class="MapTesting.MainPage">
+
+    <StackLayout>
+        <SearchBar x:Name="searchbar" SearchButtonPressed="SearchBar_SearchButtonPressed" />
+        <Label Text="Search Result" x:Name="resultlbl"/>
+        <maps:Map x:Name="map"
+                  MeasureInvalidated="map_MeasureInvalidated"
+                  MyLocationButtonClicked="map_MyLocationButtonClicked"
+                  IsTrafficEnabled="True"
+                  MyLocationEnabled ="True"
+                  InitialCameraUpdate="-23.68, -46.87, 13, 30, 60"
+                  VerticalOptions="FillAndExpand" />
+    </StackLayout>
+
+</ContentPage>
